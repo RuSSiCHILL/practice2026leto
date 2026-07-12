@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+[DisplayName("Команда размера каталога")]
+[Version(1, 0)]
 public class FindFilesCommand : ICommand
 {
     private readonly string _directoryPath;

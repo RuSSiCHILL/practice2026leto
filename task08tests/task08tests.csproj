@@ -23,10 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommandLib\CommandLib.csproj" />
-    <ProjectReference Include="..\FileSystemCommands\FileSystemCommands.csproj" />
     <ProjectReference Include="..\task08\CommandLib\CommandLib.csproj" />
     <ProjectReference Include="..\task08\FileSystemCommands\FileSystemCommands.csproj" />
+    <ProjectReference Include="..\task08\MetadataViewer\MetadataViewer.csproj" />
   </ItemGroup>
 
 </Project>

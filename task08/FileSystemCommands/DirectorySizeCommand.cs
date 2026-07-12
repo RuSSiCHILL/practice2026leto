@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 
+[DisplayName("Команда размера каталога")]
+[Version(1, 0)]
 public class DirectorySizeCommand : ICommand
 {
     private readonly string _directoryPath;
