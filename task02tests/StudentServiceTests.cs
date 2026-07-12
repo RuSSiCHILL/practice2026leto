@@ -70,3 +70,4 @@ public class StudentServiceTests
         var result = empty.GetFacultyWithHighestAverageGrade();
         Assert.Equal("", result);
 }
+}
