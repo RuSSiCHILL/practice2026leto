@@ -8,12 +8,6 @@ public class MetadataViewer
 {
     public static void Run(string dllPath, TextWriter output)
     {
-        if (string.IsNullOrEmpty(dllPath))
-        {
-            output.WriteLine("Укажите путь к DLL.");
-            return;
-        }
-
         try
         {
             var assembly = Assembly.LoadFrom(dllPath);
@@ -27,7 +21,7 @@ public class MetadataViewer
 
                 output.WriteLine("  Конструкторы:");
                 foreach (var ctor in type.GetConstructors(BindingFlags.Public | BindingFlags.Instance))
-                    output.WriteLine("    .ctor(" + string.Join(", ", ctor.GetParameters().Select(p => p.ParameterType.Name + " " + p.Name)) + ")");
+                    output.WriteLine("  .ctor(" + string.Join(", ", ctor.GetParameters().Select(p => p.ParameterType.Name + " " + p.Name)) + ")");
 
                 output.WriteLine("  Методы:");
                 foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))

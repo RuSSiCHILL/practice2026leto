@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandRunner", "task08\Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetadataViewer", "task08\MetadataViewer\MetadataViewer.csproj", "{CE5A9DDA-0F99-40DB-9BEE-0AE9EC9ECDA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task10", "task10\task10.csproj", "{B737499D-0528-4FDA-AD28-A8CA74BF6844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task10tests", "task10tests\task10tests.csproj", "{098F5DFC-24B1-48F8-A1BC-4865F32DEC11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,14 @@ Global
 		{CE5A9DDA-0F99-40DB-9BEE-0AE9EC9ECDA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5A9DDA-0F99-40DB-9BEE-0AE9EC9ECDA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE5A9DDA-0F99-40DB-9BEE-0AE9EC9ECDA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B737499D-0528-4FDA-AD28-A8CA74BF6844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B737499D-0528-4FDA-AD28-A8CA74BF6844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B737499D-0528-4FDA-AD28-A8CA74BF6844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B737499D-0528-4FDA-AD28-A8CA74BF6844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{098F5DFC-24B1-48F8-A1BC-4865F32DEC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{098F5DFC-24B1-48F8-A1BC-4865F32DEC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{098F5DFC-24B1-48F8-A1BC-4865F32DEC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{098F5DFC-24B1-48F8-A1BC-4865F32DEC11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{04223EE7-589D-451A-B31E-8364DCE0EDC5} = {E6E535B6-8A14-410A-8E20-2D4037A1863E}
