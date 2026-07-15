@@ -60,18 +60,19 @@ double bestSpeedup = (singleAvg - best.time) / singleAvg * 100;
 System.Console.WriteLine($"Ускорение: {bestSpeedup:F1}%");
 
 var plt = new ScottPlot.Plot();
-var xs = results.Select(r => (double)r.threads).ToArray();
-var ys = results.Select(r => r.time).ToArray();
+
+var xs = results.Select(r => r.time).ToArray();
+var ys = results.Select(r => (double)r.threads).ToArray();
 
 var scatter = plt.Add.Scatter(xs, ys);
 scatter.MarkerSize = 10;
 scatter.LineWidth = 2;
 
 plt.Title($"Время вычисления и количество потоков (шаг {selectedStep:E})");
-plt.XLabel("Количество потоков");
-plt.YLabel("Время (мс)");
+plt.XLabel("Время (мс)");
+plt.YLabel("Количество потоков");
 
-plt.Add.Marker(best.threads, best.time, color: ScottPlot.Colors.Red, size: 15, shape: ScottPlot.MarkerShape.OpenCircle);
+plt.Add.Marker(best.time, best.threads, color: ScottPlot.Colors.Red, size: 15, shape: ScottPlot.MarkerShape.OpenCircle);
 plt.SavePng("graph.png", 800, 600);
 
 string report = $@"=== Результаты оптимизации ===
