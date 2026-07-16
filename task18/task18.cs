@@ -3,7 +3,8 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 
-
+namespace Task18
+{
 public interface ICommand
 {
     void Execute();
@@ -188,5 +189,21 @@ public class ServerThread : IDisposable
             Join(TimeSpan.FromSeconds(5));
             _queue.Dispose();
         }
+    }
+} 
+public class HardStopCommand : ICommand
+    {
+        private readonly ServerThread _server;
+        public bool IsCompleted => true;
+        public HardStopCommand(ServerThread server) => _server = server;
+        public void Execute() => _server.HardStop();
+    }
+
+    public class SoftStopCommand : ICommand
+    {
+        private readonly ServerThread _server;
+        public bool IsCompleted => true;
+        public SoftStopCommand(ServerThread server) => _server = server;
+        public void Execute() => _server.SoftStop();
     }
 }
