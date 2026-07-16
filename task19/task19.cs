@@ -218,7 +218,6 @@ namespace Task19
             _counter++;
             var message = $"Поток {_id} вызов {_counter}";
             Output.Add(message);
-            Console.WriteLine(message);
             
             if (_counter >= _maxCalls)
                 IsCompleted = true;
