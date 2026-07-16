@@ -67,7 +67,6 @@ public class ServerThread : IDisposable
             if (_disposed)
                 throw new ObjectDisposedException(nameof(ServerThread));
             _isRunning = true;
-            _isStarted = true;
             _hardStop = false;
             _softStop = false;
 
